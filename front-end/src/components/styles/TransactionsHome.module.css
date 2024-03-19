@@ -1,0 +1,45 @@
+.hug {
+  width: 43em;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+
+.hug h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--colorBlack);
+}
+
+.hug .section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.section div {
+  width: 83px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  justify-content: center;
+  padding: 5.5px 15px;
+  color: var(--greyDark);
+  font-weight: 600;
+  background-color: var(--greyLighteen2);
+}
+
+.section span {
+  font-size: 1.5em;
+  color: var(--greyLighteen);
+  padding-bottom: 1.75em;
+  margin-left: 40px;
+}
+
+/* .hug span {
+  font-size: 30px;
+} */

@@ -1,0 +1,41 @@
+.spanLogo {
+  color: var(--purpleLighteen);
+}
+
+.header {
+  background-color: var(--lighteen);
+  height: 109px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header a {
+  color: #111;
+  text-decoration: none;
+}
+
+.header button {
+  height: 42px;
+  width: 164px;
+  background-color: var(--purpleLighteen);
+  color: var(--colorWhite);
+  border: none;
+  border-radius: 8px;
+}
+
+.header button:hover {
+  cursor: pointer;
+  transition: all .3s;
+  background-color: var(--purpleDark);
+}
+
+.headerBBOX{
+  width: 400px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+
+}

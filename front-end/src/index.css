@@ -1,0 +1,22 @@
+:root {
+  --backgroundColor: #f4f4f5;
+  --formBackground: #E9ECEF;
+  --normalInput: #ffffff;
+  --lighteen: #F1F3F5;
+  --lighteen2: #F0ECFB;
+  --purpleLighteen: #6741D9;
+  --colorWhite: #ffff;
+  --colorBlack: #000;
+  --greyDark: #495057;
+  --purpleDark: #4C3299; 
+  --greyLighteen: #ADB5BD;
+  --greyLighteen2: #E9ECEF;
+  --box-shadow: 0px 1px 5px 0px;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}

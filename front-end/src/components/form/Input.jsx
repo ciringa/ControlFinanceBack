@@ -1,9 +1,9 @@
 
 // eslint-disable-next-line react/prop-types
-function Input({type, value, id, placeholder}) {
+function Input({type, value, id, placeholder, onSubmit}) {
   return (
     <>
-      <input type={type} id={id} value={value}  placeholder={placeholder} />
+      <input type={type} id={id} value={value}  placeholder={placeholder} onSubmit={onSubmit} />
     </>
   )
 }

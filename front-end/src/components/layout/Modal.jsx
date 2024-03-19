@@ -8,11 +8,41 @@ import Label from "../form/Label"
 import { app } from "../../services/firebaseConfig"
 import { getAuth } from "firebase/auth"
 import { collection, addDoc, getFirestore } from "firebase/firestore"
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // eslint-disable-next-line react/prop-types
 function Modal({open, closeModal}) {
   const auth = getAuth(app)
   const db = getFirestore(app)
 
+  function notify() {
+    toast.success("Transação efetuada com sucesso!", {
+      autoClose: 3000,
+      position: "bottom-center"
+    })
+  }
+
+  function erroOption() {
+    toast.warn("Selecione uma opção.", {
+      autoClose: 3000,
+      position: "bottom-center"
+    })
+  }
+  
+  function erroInput() {
+    toast.warn("Digite o valor da entrada/saída.", {
+      autoClose: 5000,
+      position: "bottom-center"
+    })
+  }
+
+  function warning(){
+    toast.error("Preencha o campo e selecione uma opção.", {
+      autoClose: 3000,
+      position: "bottom-center"
+    })
+  }
 
   const [listDeposit, setListDeposit] = useState([])
   const [listOutFlow, setListOutFlow] = useState([])
@@ -43,13 +73,20 @@ function Modal({open, closeModal}) {
 
     function handleValue() {
 
+      if (inputRef.current.value === "" && selectedOption === "") {
+        warning()
+        return
+      }
+
       if (inputRef.current.value === "") {
-        alert("Digite o valor da entrada/saída.")
+        // alert("Digite o valor da entrada/saída.")
+        erroInput()
         return
       } 
   
       if (selectedOption === "") {
-        alert("Selecione uma opção.")
+        // alert("Selecione uma opção.")
+        erroOption()
         return
       }
   
@@ -57,6 +94,8 @@ function Modal({open, closeModal}) {
         value: inputRef.current.value,
         type: selectedOption,
       }
+
+      notify()
 
       console.log(object)//object recebe o objeto que carrega os valores
       const data ={
@@ -66,6 +105,8 @@ function Modal({open, closeModal}) {
           uid: auth.currentUser.uid,
           name:"createdByCode"
         }
+
+      
 
       }
       const myCollection = collection(db,"Transactions")
@@ -86,7 +127,9 @@ function Modal({open, closeModal}) {
  if (open) {
   return (
     <div className={styles.backgroundStyle}>
+      <ToastContainer />
       <div className={styles.modal}>
+        
         <div className={styles.topModal}>
           <h2>Registro de valor</h2>
           <span onClick={closeModal}><TfiClose /></span>

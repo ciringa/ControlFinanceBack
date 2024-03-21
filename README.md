@@ -1,7 +1,27 @@
 
 <h1>🚀 Rodando o Projeto</h1>
+instaling dependencies <br>
 
-## Credits
+    npm i 
+
+
+<br>
+access to directory 
+<br>
+
+
+    cd Control-FInance---Back/front-end 
+ 
+<br>
+Running the dependencies <br>
+
+    npm run dev
+
+click in the localhost link that will be show in your console
+
+
+
+## Credits 😎
 this is a control finance project made by me and my partner 
 frontEnd features, including the page design and menu work are completly made by my friend: 
 <a href = "https://github.com/ismael-henrique-dev">Ismael Henrique</a>

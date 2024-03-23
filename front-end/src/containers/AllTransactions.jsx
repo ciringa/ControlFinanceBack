@@ -18,6 +18,7 @@ function AllTransactions() {
   const auth = getAuth(app)
   const currentUser = auth.currentUser
   const [value,setValue] = useState(0)
+
   useEffect(()=>{
     function returnIncurrency(value){
       return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
@@ -35,33 +36,39 @@ function AllTransactions() {
         const setCollection = collection(db,"Transactions")
         const data = await getDocs(setCollection)
         const filter = data.docs.map(doc => (doc.data()))
-        //console.log(filter)
+        //console.warn(data.docs)
         transactions = []
-        filter.forEach(element =>{
-        if(currentUser){
-        
-          if(element.user.uid == currentUser.uid){
-            //console.log("tabela pertence ao usuario logado")
-            transactions.push(element)
+        filter.forEach((element,id) =>{
+          if(currentUser){
+            //map is an object used to refer to our firebase aplication the properly api id of each transaction
+            let map = {
+              value: element.value,
+              type:  element.type,
+              user: element.user,
+              id: id
+            }
+            if(element.user.uid == currentUser.uid){
+              //console.log("tabela pertence ao usuario logado")
+              transactions.push(map)
+            }
           }
-        }
-        setTotalAmount(calculateTotalValue(transactions))
-        console.log(totalAmount)
-        setListAllTransactions(transactions)
+          setTotalAmount(calculateTotalValue(transactions))
+          //console.log(totalAmount)
+          setListAllTransactions(transactions)
         })
         listAllTransactions.forEach(element =>{
-          console.table(element)
+          //console.table(element)
           //setTotalAmount(previusValue =>{previusValue+element.value})
           //console.log(totalAmount)
         })
         }
     }
     getUsers()
-  },[])
+  },[transactions])
   
   const calculateTotalValue = (element)=>{
     let total = 0
-    console.log(element)
+    //console.log(element)
     element.forEach(ps =>{
       //console.warn(ps)
       //total+=parseFloat(ps.value)
@@ -98,7 +105,7 @@ function AllTransactions() {
         <ul>
             {listAllTransactions.map((value) =>{
             return(
-              <li key={value.id}><TransactionsHome value={value.value} type={value.type}></TransactionsHome></li>
+              <li key={value.id}><TransactionsHome value={value.value} type={value.type} id={value.id}></TransactionsHome></li>
             )
           })}
         </ul>

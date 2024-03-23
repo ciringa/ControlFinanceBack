@@ -24,7 +24,7 @@ click in the localhost link that will be show in your console
 ## Credits 😎
 this is a control finance project made by me and my partner 
 frontEnd features, including the page design and menu work are completly made by my friend: 
-<a href = "https://github.com/ismael-henrique-dev">Ismael Henrique</a>
+[<a href = "https://github.com/ismael-henrique-dev">Ismael Henrique</a>]
 check: <a href = "https://github.com/ismael-henrique-dev/Control-Finance---Front-End">Control Finance FrontEnd</a>
 
 all the backEnd features like the login/singup and database storage are made by me using firebase API from google <br>

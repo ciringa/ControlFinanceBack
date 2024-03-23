@@ -15,6 +15,8 @@ import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged } from "fir
 import { app  as client } from "../../services/firebaseConfig"
 import { useState } from "react"
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function SingUp() {
   //acces to api
   const auth = getAuth(client);
@@ -28,7 +30,25 @@ function SingUp() {
   const [key, setkey] = useState('')
   const [name, setname] = useState('')
   
+  //functions toasts
   
+  function notify() {
+    toast.success("Login efetuado com sucesso!", {
+      autoClose: 3000
+    })
+  }
+
+  function erro() {
+    toast.error("Algo deu errado!", {
+      autoClose: 3000
+    })
+  }
+
+  function warning(){
+    toast.warn("O que vc quiser...", {
+      autoClose: 3000
+    })
+  }
   
   
   function login(e){
@@ -46,6 +66,7 @@ function SingUp() {
 
       }).catch(err =>{
         console.warn(err)
+        erro()
       })
 
   }
@@ -75,6 +96,7 @@ function SingUp() {
           <LinkButton to="/login" text="Voltar"/>
         </div>
         <form className={styles.form} onSubmit={login}>
+        <ToastContainer />
             <div className={styles.top}>
               <h1>Criar Conta</h1>
             </div>

@@ -9,5 +9,6 @@ function Label({input, text}) {
     </>
   )
 }
+//teste
 
 export default Label

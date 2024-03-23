@@ -16,9 +16,30 @@ import { getAuth, onAuthStateChanged, signInWithEmailAndPassword } from "firebas
 import { app } from "../../services/firebaseConfig"
 import { Navigate } from "react-router-dom"
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const auth = getAuth(app)
 
 function Login() {
+
+      function notify() {
+        toast.success("Login efetuado com sucesso!", {
+          autoClose: 3000
+        })
+      }
+
+      function erro() {
+        toast.error("Algo deu errado!", {
+          autoClose: 3000
+        })
+      }
+
+      function warning(){
+        toast.warn("O que vc quiser...", {
+          autoClose: 3000
+        })
+      }
 
       //demodularization
       const [showPassword, setShowPassword] = useState(false)
@@ -37,14 +58,22 @@ function Login() {
         console.log(data)  
         signInWithEmailAndPassword(auth,data.Demail,data.Dkey).then((g)=>{
           if(g){
+            notify()
             const currentUser = g
             console.log("loged in as "+ currentUser.uid)
-            setLogged(true)
+
+            setTimeout(()=> {
+              setLogged(true)
+            }, 5000)
+            
+            
           }else{
             console.log("failed to load")
           }
         }).catch(err=>{
           console.warn(err)
+          erro()
+          warning() //Só pra tú ver, ou melhor chama-la
         })
       }
 
@@ -54,12 +83,13 @@ function Login() {
     <>
       <Navigate to="/"/>
     </>:
+      
       <div className={styles.container}>
         <div>
             <h1><span className={styles.spanLogo}>Control</span> Finance</h1>
           </div>
         <form className={styles.form} onSubmit={login}>
-        
+        <ToastContainer />
           
             <h1>Login</h1>
             <div className={styles.inputArea}>

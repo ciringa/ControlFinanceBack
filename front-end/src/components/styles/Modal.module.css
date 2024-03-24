@@ -6,7 +6,6 @@
   right: 0;
   z-index: 1000;
   background-color: #2125298a;
-  
 }
 
 .modal {
@@ -162,4 +161,42 @@ span:hover {
   background-color: var(--purpleDark);
   transition: all .3s;
   cursor: pointer;
+}
+
+@media (max-width: 480px) {
+
+  .modal {
+    width: 85%;
+    height: 85%;
+  }
+
+  input[type=number] {
+    width: 80vw;
+  }
+
+  .optionsArea {
+    flex-direction: column;
+  }
+
+  .optionsArea div {
+    flex-direction: column;
+  }
+
+  .optionsArea h2 {
+    margin-right: 50%;
+  }
+
+  option {
+    margin-top: 35px;
+  }
+
+  .bottonModal {
+    margin-top: 50%;
+    justify-content: center;
+  }
+
+  .bottonModal button {
+    width: 30vw;
+    font-size: 14px;
+  }
 }

@@ -40,7 +40,9 @@ function SingUp() {
 
   function erro() {
     toast.error("Algo deu errado!", {
-      autoClose: 3000
+      autoClose: 3000,
+      position: "bottom-center",
+      className: '.toast'
     })
   }
 
@@ -92,23 +94,23 @@ function SingUp() {
     :
       <div className={styles.container} >
         <div className={styles.topSingUp}>
-          <h1><span className={styles.spanLogo}>Control</span> Finance</h1>
+          <h1><span className={styles.spanLogo}>Control</span>Finance</h1>
           <LinkButton to="/login" text="Voltar"/>
         </div>
         <form className={styles.form} onSubmit={login}>
-        <ToastContainer />
+        <ToastContainer  className={styles.toast}/>
             <div className={styles.top}>
               <h1>Criar Conta</h1>
             </div>
             <div className={styles.inputArea}>
               <Label input="nameInput" text="Nome"/>
-              <input type="text" id="nameInput" placeholder="digite seu nome"
+              <input type="text" id="nameInput" placeholder="Digite seu nome"
                 value={name} onChange={(e) =>setname(e.target.value)}
               />
             </div>
             <div className={styles.inputArea}>
               <Label input="emailInput" text="Email" />
-              <input id="emailInput" placeholder="digite seu email"
+              <input id="emailInput" placeholder="Digite seu email"
               value={email}
               type="email"
               onChange={(e) => {setemail(e.target.value)}}
@@ -119,7 +121,7 @@ function SingUp() {
               <div className={inputStyles.inputContainer}>
                 <input 
                 id="passwordInput"
-                placeholder="insira sua senha"
+                placeholder="Insira sua senha"
                 type={showPassword ? "text" : "password" } 
                 value={key}
                 onChange={(e)=>{setkey(e.target.value)}}
@@ -132,7 +134,7 @@ function SingUp() {
               <div className={inputStyles.inputContainer}>
                 <input 
                 id="submitInputConfirm"
-                placeholder="insira sua senha"
+                placeholder="Insira sua senha"
                 type={showPassword ? "text" : "password" } 
                 />
                 <span onClick={(e)=>{setShowPassword(!showPassword)}}>{showPassword ?  <BsFillEyeFill />  : <BsFillEyeSlashFill  /> }</span>

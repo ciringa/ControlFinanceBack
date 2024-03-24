@@ -3,6 +3,8 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   margin-bottom: -2.8em;
+   
 }
 
 .inputContainer span {
@@ -13,3 +15,9 @@
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .inputContainer span {
+        left: 6.2em;
+        top: -2.7em;
+    }
+}

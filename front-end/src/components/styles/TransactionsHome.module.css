@@ -40,6 +40,11 @@
   margin-left: 40px;
 }
 
-/* .hug span {
-  font-size: 30px;
-} */
+@media (max-width: 768px) {
+
+  .hug {
+    width: 80vw;
+    margin: 20px 6%;
+  }
+
+}

@@ -54,3 +54,24 @@ option:hover {
 ul {
   list-style: none;
 }
+
+@media (max-width: 768px) {
+
+  section {
+    width: 100vw;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar h2 {
+    margin-right: 35%;
+  }
+
+  .navbar div {
+    width: 100vw;
+    margin: 20px 6%;
+  }
+  
+}

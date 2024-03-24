@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 35em;
+  height: 33em;
   width: 30em;
   padding: 24px;
   border-radius: 8px;
@@ -48,7 +48,8 @@ p {
   justify-content: center;
   align-items: center;
   width: 21em;
-  margin-bottom: 24px;
+  margin-top: 1em;
+  margin-bottom: 4em;
   height: 48px;
   font-size: 16px;
   font-weight: 300;
@@ -62,7 +63,7 @@ p {
   background-color: var(--greyLighteen);
 }
 
-.top {
+/* .top {
   display: flex;
   justify-content: space-between;
 }
@@ -71,9 +72,10 @@ p {
   width: 30em;
   display: flex;
   justify-content: space-between;
-}
+  
+}  */
 
-.topSingUp a {
+/* .topSingUp a {
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -92,17 +94,17 @@ p {
 .topSingUp a:hover {
   transition: all .3s;
   background-color: var(--greyLighteen);
-}
+} */
 
 .container h1 {
-  margin-bottom: 10px;
-  font-size: 1.5em;
+  margin-bottom: 15px;
+  font-size: 1.7em;
 }
 
 .form h1 {
-  margin-bottom: 5px;
-  margin-top: 2em;
-  font-size: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 22px;
+  font-size: 1.7em;
 }
 
 .form input {
@@ -122,9 +124,7 @@ p {
 }
 
 .form input[type=submit] {
-  margin-bottom: 65px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  margin-bottom: -24px;
   cursor: pointer;
   background-color: var(--purpleLighteen);
   color: var(--colorWhite);
@@ -147,7 +147,6 @@ button:hover {
   transition: all .3s;
   background-color: var(--purpleDark);
 }
-
 .spanLogo {
   color: var(--purpleLighteen);
 }
@@ -162,8 +161,8 @@ button:hover {
 
   .form {
     width: 20em;
-    height: 36em;
-    margin-bottom: 38vh;
+    height: 29em;
+    margin-bottom: 15em;
   }
 
   .form input {
@@ -176,12 +175,11 @@ button:hover {
   }
 
   .form h1 {
-    font-size: 14px;
+    font-size: 1.5em;
     margin-top: 1em;
   }
 
   .topSingUp {
-    margin-top: 3em;
     width: 20em;
   }
 
@@ -192,17 +190,20 @@ button:hover {
   .form a {
     height: 35px;
     margin-top: 12px;
+    margin-bottom: 2em;
+  }
+
+  .inputSubmit {
+    margin-bottom: -22px;
   }
 
   .form input[type=submit] {
-    padding-bottom: 5px;
-    padding-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: -22px;
   }
 
   .container {
-    height: 100vh;
-    margin-top: 25%;
+    margin: auto;
+    margin-top: 20vh;
   }
 
   .container h1 {
@@ -214,19 +215,4 @@ button:hover {
     margin-top: -22px;
   }
   
-
 }
-
-/* @media (max-width: 380px) {
-  .container {
-    margin-top: 8vh;
-  }
-
-  .form  h1 {
-    margin-top: 1em;
-  }
-
-  .form input[type=submit] {
-    margin-bottom: 10px;
-  }
-} */

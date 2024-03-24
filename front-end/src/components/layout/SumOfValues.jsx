@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+
 import styles from "../styles/SumOfValues.module.css"
 // eslint-disable-next-line react/prop-types
 function SumOfValues({totalAmount}) {

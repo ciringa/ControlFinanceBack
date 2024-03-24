@@ -9,6 +9,7 @@ import { BsFillEyeFill } from "react-icons/bs"
 import { BsFillEyeSlashFill } from "react-icons/bs"
 import inputStyles from "../styles/Input.module.css"
 import styles from "../styles/Form.module.css"
+import styles2 from "../styles/LoginForm.module.css"
 
 
 import { useState } from "react"
@@ -31,12 +32,6 @@ function Login() {
 
       function erro() {
         toast.error("Algo deu errado!", {
-          autoClose: 3000
-        })
-      }
-
-      function warning(){
-        toast.warn("O que vc quiser...", {
           autoClose: 3000
         })
       }
@@ -73,7 +68,6 @@ function Login() {
         }).catch(err=>{
           console.warn(err)
           erro()
-          warning() //Só pra tú ver, ou melhor chama-la
         })
       }
 
@@ -84,24 +78,24 @@ function Login() {
       <Navigate to="/"/>
     </>:
       
-      <div className={styles.container}>
-        <div>
-            <h1><span className={styles.spanLogo}>Control</span> Finance</h1>
+      <div className={styles2.container}>
+        <div className={styles2.logoArea}>
+            <h1><span className={styles2.spanLogo}>Control</span>Finance</h1>
           </div>
-        <form className={styles.form} onSubmit={login}>
+        <form className={styles2.form} onSubmit={login}>
         <ToastContainer />
           
             <h1>Login</h1>
-            <div className={styles.inputArea}>
+            <div className={styles2.inputArea}>
               <Label input="emailInput" text="Email" />
-              <input type="text"  id="emailInput" placeholder="Insira seu Email"
+              <input type="text"  id="emailInput" placeholder="Insira seu email"
 
               value={email}
               onChange={(e) =>{setEmail(e.target.value)}}
 
               />
             </div>
-            <div className={styles.inputArea}>
+            <div className={styles2.inputArea}>
               <Label input="emailInput" text="Senha" />
               <div className={inputStyles.inputContainer}>
                   <input 
@@ -114,10 +108,10 @@ function Login() {
                   <span onClick={(e)=>{setShowPassword(!showPassword)}}>{showPassword ?  <BsFillEyeFill />  : <BsFillEyeSlashFill  /> }</span>
                 </div>
             </div>
-            <div className={styles.inputArea}>
-              <Input type="submit" value="Entrar"/>
+            <div className={styles2.inputArea}>
+              <Input type="submit" value="Entrar" classname={styles.inputSubmit}/>
             </div>
-            <div className={styles.redirectArea}>
+            <div className={styles2.redirectArea}>
               <p>Ainda não possui uma conta?</p>
               <LinkButton to="/singUp" text="Cadraste-se"/>
             </div>

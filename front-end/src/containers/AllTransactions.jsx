@@ -4,14 +4,14 @@ import SumOfValues from "../components/layout/SumOfValues"
 import { app } from "../services/firebaseConfig"
 import {collection, getDocs, getFirestore} from "firebase/firestore"
 import {getAuth} from "firebase/auth"
-
+import { Tb360 } from "react-icons/tb";
 import styles from "../components/styles/SumOfValues.module.css"
 
 
 function AllTransactions() {
 
   const [totalAmount,setTotalAmount] = useState(0)
-
+  const [update,setUpdate] = useState(false)
   const [listAllTransactions,setListAllTransactions] = useState([])
   const db = getFirestore(app)
   var transactions = []
@@ -64,7 +64,8 @@ function AllTransactions() {
         }
     }
     getUsers()
-  },[transactions])
+  },[update])
+
   
   const calculateTotalValue = (element)=>{
     let total = 0
@@ -88,17 +89,17 @@ function AllTransactions() {
   },[totalAmount])
 
 
-  function callUpdate(){
-    const totalupdate = totalAmount
-    setTotalAmount(totalupdate)
-    console.log("totalUpdate:"+totalAmount)
+  const callUpdate = () => {
+    //const totalupdate = totalAmount
+    setUpdate(Math.random())
+    console.log("callToupdateCalled:"+totalAmount)
   }
   return (
     <>
-      <div onClick={()=>{
-        callUpdate()
-      }}>
+      <div>
+
       <div className={styles.cardMainValues}> 
+
             <h2>Soma dos valores</h2>
             <h2>{value}</h2>
           </div>

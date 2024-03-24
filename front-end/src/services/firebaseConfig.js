@@ -3,14 +3,14 @@ import { initializeApp } from "firebase/app";
 
 
 
-
+//firebase key code
 const firebaseConfig = {
-  apiKey: "AIzaSyCXP6hKD8xeusmbYeJqEstMrLWVBTNf7Fw",
-  authDomain: "control-finance-ba9f0.firebaseapp.com",
-  projectId: "control-finance-ba9f0",
-  storageBucket: "control-finance-ba9f0.appspot.com",
-  messagingSenderId: "6792313772",
-  appId: "1:6792313772:web:50022f7540dce27bab9809"
+  apiKey: "AIzaSyBYttlEOTk-ymolsGchAX1mhCXthIOg6t0",
+  authDomain: "control-finance2.firebaseapp.com",
+  projectId: "control-finance2",
+  storageBucket: "control-finance2.appspot.com",
+  messagingSenderId: "245819667059",
+  appId: "1:245819667059:web:242a49b182638fdff67006"
 };
 
 // Initialize Firebase (export because its an important config)

@@ -88,15 +88,25 @@ function AllTransactions() {
     console.log("totalUpdate:"+totalAmount)
   },[totalAmount])
 
+  useEffect(() => {
+    // Função que será chamada a cada 2 segundos
+    const callUpdate = () => {
+      //const totalupdate = totalAmount
+      setUpdate(Math.random())
+      console.log("callToupdateCalled:"+update)
+    }
+    // Chama a função a cada 2 segundos
+    const intervalId = setInterval(callUpdate, 5000);
+    // Limpa o intervalo quando o componente é desmontado para evitar vazamento de memória
+    return () => clearInterval(intervalId);
+  }, []); // Dependência vazia para garantir que a função seja executada apenas uma vez após a montagem do componente
 
-  const callUpdate = () => {
-    //const totalupdate = totalAmount
-    setUpdate(Math.random())
-    console.log("callToupdateCalled:"+totalAmount)
-  }
+
   return (
     <>
-      <div>
+      <div onClick={()=>{
+        callUpdate()
+      }}>
 
       <div className={styles.cardMainValues}> 
 
@@ -106,7 +116,7 @@ function AllTransactions() {
         <ul>
             {listAllTransactions.map((value) =>{
             return(
-              <li key={value.id}><TransactionsHome value={value.value} type={value.type} id={value.id}></TransactionsHome></li>
+              <li key={value.id} ><TransactionsHome value={value.value} type={value.type} id={value.id}></TransactionsHome></li>
             )
           })}
         </ul>

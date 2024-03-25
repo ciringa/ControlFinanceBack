@@ -11,7 +11,7 @@ import styles from "../components/styles/SumOfValues.module.css"
 function OutflowMoney() {
 
   const [totalAmount,setTotalAmount] = useState(0)
-
+  const [update,setUpdate] = useState(false)
   const [listAllTransactions,setListAllTransactions] = useState([])
   const db = getFirestore(app)
   var transactions = []
@@ -59,7 +59,7 @@ function OutflowMoney() {
         }
     }
     getUsers()
-  },[])
+  },[update])
   
   const calculateTotalValue = (element)=>{
     let total = 0
@@ -83,11 +83,19 @@ function OutflowMoney() {
   },[totalAmount])
 
 
-  function callUpdate(){
-    const totalupdate = totalAmount
-    setTotalAmount(totalupdate)
-    console.log("totalUpdate:"+totalAmount)
-  }
+  useEffect(() => {
+    // Função que será chamada a cada 2 segundos
+    const callUpdate = () => {
+      //const totalupdate = totalAmount
+      setUpdate(Math.random())
+      console.log("callToupdateCalled:"+update)
+    }
+    // Chama a função a cada 2 segundos
+    const intervalId = setInterval(callUpdate, 5000);
+    // Limpa o intervalo quando o componente é desmontado para evitar vazamento de memória
+    return () => clearInterval(intervalId);
+  }, []); // Dependência vazia para garantir que a função seja executada apenas uma vez após a montagem do componente
+
   return (
     <>
       <div>

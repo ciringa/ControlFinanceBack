@@ -2,7 +2,7 @@
 <h1>🚀 Running the Project </h1>
 instaling dependencies <br>
 
-    npm i 
+    npm o
 
 
 <br>

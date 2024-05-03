@@ -9,7 +9,7 @@
    <img src="https://img.shields.io/badge/NPM-v9.5.1-white?style=for-the-badge" />
 </p>
 
-Control Finance tem como objetivo ajudar ao usuário a fazer uma melhor organizão ao seu dinheiro.
+Control Finance tem como objetivo ajudar ao usuário a fazer uma melhor organização ao seu dinheiro.
 
 ## 📸 Screenshots
 <p align="center">
@@ -69,7 +69,7 @@ Inicie o servidor
 - `Front end:` [<a href = "https://github.com/ismael-henrique-dev">Ismael Henrique</a>] "Com esse projeto consegui adquirir melhores conhecimentos em react, como componentização, props e states. Tive bastante dificuldade nos assuntos citados antes por mim."
 - `Back end:` [<a href = "https://github.com/ciringa">Thierrir Alencar</a>] "..."
 
-## ⚙️ Back End details
+## ⚙️ Back End Details - <a href = "https://github.com/ciringa">Thierrir Alencar</a>
 <ul>
     <li>login and singup</li>
     <li>addiction of transactions</li>

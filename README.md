@@ -21,7 +21,7 @@ Control Finance tem como objetivo ajudar ao usuário a fazer uma melhor organiza
 ## 🎥 Preview
 
 <p align="center">
-  <img height="430" src="src/assets/gif-previw.gif" />
+  <img height="400" src="front-end/assets/gif.gif" />
 </p>
 
 ## 🚀 Rodando localmente

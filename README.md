@@ -1,3 +1,87 @@
+<p align="center">
+  <img align="center" height="300" src="front-end/assets/Control Finance.png"  />
+</p>
+
+## <p align="center">Grocery Store</p>
+
+<p align="center">
+   <img src="https://img.shields.io/badge/React-v18.2.0-white?style=for-the-badge" />
+   <img src="https://img.shields.io/badge/NPM-v9.5.1-white?style=for-the-badge" />
+</p>
+
+Grocery Store é um ecommerce online com o objetivo de trazer praticidade para o cliente, podendo ele comprar seus alimentos diretamente de seu dispositivo.
+
+
+## 📸 Screenshots
+<p align="center">
+  <img height="350" src="src/assets/home.png" />
+  <img height="350" src="src/assets/filter.png" />
+  <img height="430" src="src/assets/emptycart.png" />
+</p>
+
+## 🎥 Preview
+
+<p align="center">
+  <img height="430" src="src/assets/gif-previw.gif" />
+</p>
+
+## 🚀 Rodando localmente
+
+Clone o projeto
+
+```bash
+  git clone https://github.com/ismael-henrique-dev/Grocery-Store.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd front-end
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Inicie o servidor
+
+```bash
+  npm run dev
+```
+
+
+
+## 💻 Tecnologias Utilizadas
+- ![Badge React](https://img.shields.io/badge/React-%E2%9C%94-blue?style=for-the-badge)
+- ![Badge React Icons](https://img.shields.io/badge/React_Icons-%E2%9C%94-blue?style=for-the-badge)
+- ![Badge React Router Dom](https://img.shields.io/badge/React%20Router%20Dom-%E2%9C%94-blue?style=for-the-badge)  
+- ![Badge React Toastify](https://img.shields.io/badge/React%20Toastify-%E2%9C%94-blue?style=for-the-badge)  
+- ![Badge Firebase](https://img.shields.io/badge/Firebase-%E2%9C%94-blue?style=for-the-badge)
+
+
+## 🛠️ Funcionalidades
+
+- Logar/Criar conta
+- Selecionar por entrada/saída
+- Adicionar/remover transações
+- Transações salvas no banco de dados
+
+
+## 🎓 Aprendizado
+
+O objetivo desse projeto foi aprender, com ele consegui aperfeiçoar meus conhecimentos em React, TypeScript e Tailwindcss. O foco também foi desenvolver a lógica de programação, tive bastante dificuldade em implementar funcionalidades relacionadas as alterações do checkbox e do carrinho, mas após bastante pesquisa consegui resolver esse problema.
+
+
+
+
+
+
+
+
+
+
 
 <h1>🚀 Running the Project </h1>
 instaling dependencies <br>

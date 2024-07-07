@@ -4,32 +4,12 @@
 
 ## <p align="center">Control Finance</p>
 
-<p align="center">
-   <img src="https://img.shields.io/badge/React-v18.2.0-white?style=for-the-badge" />
-   <img src="https://img.shields.io/badge/NPM-v9.5.1-white?style=for-the-badge" />
-</p>
-
-Control Finance tem como objetivo ajudar ao usuário a fazer uma melhor organização ao seu dinheiro.
-
-## 📸 Screenshots
-<p align="center">
-  <img height="350" src="front-end/assets/home.png" />
-  <img height="350" src="front-end/assets/modal.png" />
-  <img height="350" src="front-end/assets/login.png" />
-</p>
-
-## 🎥 Preview
-
-<p align="center">
-  <img height="400" src="front-end/assets/video-controlFinance.gif" />
-</p>
-
 ## 🚀 Rodando localmente
 
 Clone o projeto
 
 ```bash
-  git clone https://github.com/ismael-henrique-dev/Control-Finance.git
+  git clone https://github.com/ciringa/ControlFinanceBack
 ```
 
 Entre no diretório do projeto

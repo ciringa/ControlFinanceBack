@@ -1,37 +1,75 @@
+<p align="center">
+  <img align="center" height="300" src="front-end/assets/Control Finance.png"  />
+</p>
 
-<h1>🚀 Running the Project </h1>
-instaling dependencies <br>
+## <p align="center">Control Finance</p>
 
-    npm i 
+<p align="center">
+   <img src="https://img.shields.io/badge/React-v18.2.0-white?style=for-the-badge" />
+   <img src="https://img.shields.io/badge/NPM-v9.5.1-white?style=for-the-badge" />
+</p>
 
+Control Finance tem como objetivo ajudar ao usuário a fazer uma melhor organização ao seu dinheiro.
 
-<br>
-access to directory 
-<br>
+## 📸 Screenshots
+<p align="center">
+  <img height="350" src="front-end/assets/home.png" />
+  <img height="350" src="front-end/assets/modal.png" />
+  <img height="350" src="front-end/assets/login.png" />
+</p>
 
+## 🎥 Preview
 
-    cd Control-FInance---Back/front-end 
- 
-<br>
-Running the dependencies <br>
+<p align="center">
+  <img height="400" src="front-end/assets/video-controlFinance.gif" />
+</p>
 
-    npm run dev
+## 🚀 Rodando localmente
 
-click in the localhost link that will be show in your console
+Clone o projeto
 
+```bash
+  git clone https://github.com/ismael-henrique-dev/Control-Finance.git
+```
 
+Entre no diretório do projeto
 
-## Credits 😎
-this is a control finance project made by me and my partner 
-frontEnd features, including the page design and menu work are completly made by my friend: 
-[<a href = "https://github.com/ismael-henrique-dev">Ismael Henrique</a>]
-check: <a href = "https://github.com/ismael-henrique-dev/Control-Finance---Front-End">Control Finance FrontEnd</a>
+```bash
+  cd front-end
+```
 
-all the backEnd features like the login/singup and transaction manipulation are made by me(<a href = "https://ciringa.github.io">ciringa</a>) using firebase API from google <br>
-data <a href="https://ciringa.github.io/Control-FInance---Back/">this file link</a>
+Instale as dependências
 
-README made by: <a href = "https://ciringa.github.io">ciringa</a>
-## current features 
+```bash
+  npm install
+```
+
+Inicie o servidor
+
+```bash
+  npm run dev
+```
+
+## 💻 Tecnologias Utilizadas
+- ![Badge React](https://img.shields.io/badge/React-%E2%9C%94-blue?style=for-the-badge)
+- ![Badge React Icons](https://img.shields.io/badge/React_Icons-%E2%9C%94-blue?style=for-the-badge)
+- ![Badge React Router Dom](https://img.shields.io/badge/React%20Router%20Dom-%E2%9C%94-blue?style=for-the-badge)  
+- ![Badge React Toastify](https://img.shields.io/badge/React%20Toastify-%E2%9C%94-blue?style=for-the-badge)  
+- ![Badge Firebase](https://img.shields.io/badge/Firebase-%E2%9C%94-blue?style=for-the-badge)
+
+## 🛠️ Funcionalidades
+
+- Logar/Criar conta
+- Selecionar por entrada/saída
+- Adicionar/remover transações
+- Transações salvas no banco de dados
+
+## 🎓 Aprendizado
+
+- `Front end:` [<a href = "https://github.com/ismael-henrique-dev">Ismael Henrique</a>] "Com esse projeto consegui adquirir melhores conhecimentos em react, como componentização, props e states. Tive bastante dificuldade nos assuntos citados antes por mim."
+- `Back end:` [<a href = "https://github.com/ciringa">Thierrir Alencar</a>] "..."
+
+## ⚙️ Back End Details - <a href = "https://github.com/ciringa">Thierrir Alencar</a>
 <ul>
     <li>login and singup</li>
     <li>addiction of transactions</li>

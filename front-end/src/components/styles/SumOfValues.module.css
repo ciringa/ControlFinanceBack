@@ -17,7 +17,7 @@
 @media (max-width: 768px) {
   .cardMainValues {
     width: 80vw;
-    margin: auto 6%;
+    margin: auto;
     /* position: relative;
     right: 30%; */
   }
